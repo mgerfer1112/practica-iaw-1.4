@@ -16,9 +16,6 @@ sudo openssl req \
   -out /etc/ssl/certs/apache-selfsigned.crt \
   -subj "/C=$OPENSSL_COUNTRY/ST=$OPENSSL_PROVINCE/L=$OPENSSL_LOCALITY/O=$OPENSSL_ORGANIZATION/OU=$OPENSSL_ORGUNIT/CN=$OPENSSL_COMMON_NAME/emailAddress=$OPENSSL_EMAIL"
 
-  #Al ejecutarlo en un terminal con un sudo empieza a preguntar varias cosas
-  #Por ello vamos a automatizarlo con unas variables.
-
 #Creamos y habilitamos el default-ssl.conf
 #Copiamos el archivo del VirtualBox del puerto 443
 cp ../conf/default-ssl.conf /etc/apache2/site-available
@@ -57,15 +54,3 @@ systemctl restart apache2
 #El codigo 300 es de redirecciones. y 301 que el recurso por http ya no existe
 #tiene que irse al recurso nuevo por https
 
-#el cp de encima de apahce2
-
-# !!!!!!!!!!!!!!
-#Si hasta aquí ha funcionado, se debe poder ver como si
-#busco algo con http nos redirige a https
-
-
-#FALTA 
-#En mi máqona local
-
-#sudo nano /etc/hosts
-#añadir IP y poner  nombre practica-https.local
