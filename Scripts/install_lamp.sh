@@ -28,7 +28,7 @@ systemctl restart apache2
 apt install mysql-server -y
 
 #copiamos el scritp de prueba php
-cp /home/ubuntu/practica-iaw-1.1/php/index.php /var/www/html
+cp ../php/index.php /var/www/html
 
 #modificamos el propietario y el grupo del archivo index.php
 chown -R www-data:www-data /var/www/html
