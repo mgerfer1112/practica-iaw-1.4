@@ -18,7 +18,7 @@ sudo openssl req \
 
 #Creamos y habilitamos el default-ssl.conf
 #Copiamos el archivo del VirtualBox del puerto 443
-cp ../conf/default-ssl.conf /etc/apache2/site-available
+cp ../conf/default-ssl.conf /etc/apache2/sites-available
 
 #Comprobamos que en site-available está el documento con un cat
 
